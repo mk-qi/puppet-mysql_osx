@@ -1,4 +1,4 @@
-name    'bjoernalbers-mysql'
+name    'bjoernalbers-mysql_osx'
 version '0.0.1'
 source 'UNKNOWN'
 author 'bjoernalbers'

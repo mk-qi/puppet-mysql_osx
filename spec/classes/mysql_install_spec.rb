@@ -1,6 +1,6 @@
 require 'spec_helper'
 
-describe 'mysql::install' do
+describe 'mysql_osx::install' do
   it { should contain_package('mysql').with(
     :ensure   => 'present',
     :provider => 'brew',

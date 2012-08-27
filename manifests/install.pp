@@ -1,4 +1,4 @@
-class mysql::install {
+class mysql_osx::install {
   package { 'mysql':
     ensure   => present,
     provider => brew,

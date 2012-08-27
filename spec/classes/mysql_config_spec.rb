@@ -1,12 +1,12 @@
 require 'spec_helper'
 
-describe 'mysql::config' do
+describe 'mysql_osx::config' do
   it { should contain_file('/etc/my.cnf').with(
     :ensure  => 'present',
-    :source  => 'puppet:///modules/mysql/my-large.cnf',
+    :source  => 'puppet:///modules/mysql_osx/my-large.cnf',
     :owner   => '_mysql',
     :group   => '_mysql',
-    :require => 'Class[Mysql::Install]',
-    :notify  => 'Class[Mysql::Service]'
+    :require => 'Class[Mysql_osx::Install]',
+    :notify  => 'Class[Mysql_osx::Service]'
   )}
 end
