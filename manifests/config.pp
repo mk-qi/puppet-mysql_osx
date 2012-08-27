@@ -4,6 +4,7 @@ class mysql::config {
     source  => 'puppet:///modules/mysql/my-large.cnf',
     owner   => '_mysql',
     group   => '_mysql',
-    require => Class['mysql::install']
+    require => Class['mysql::install'],
+    notify  => Class['mysql::service']
   }
 }

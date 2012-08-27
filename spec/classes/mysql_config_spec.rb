@@ -6,6 +6,7 @@ describe 'mysql::config' do
     :source  => 'puppet:///modules/mysql/my-large.cnf',
     :owner   => '_mysql',
     :group   => '_mysql',
-    :require => 'Class[Mysql::Install]'
+    :require => 'Class[Mysql::Install]',
+    :notify  => 'Class[Mysql::Service]'
   )}
 end

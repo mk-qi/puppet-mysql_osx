@@ -36,5 +36,5 @@
 # Copyright 2011 Your name here, unless otherwise noted.
 #
 class mysql {
-  include mysql::install, mysql::config
+  include mysql::install, mysql::config, mysql::service
 }
