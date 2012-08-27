@@ -1,11 +1,8 @@
 name    'bjoernalbers-mysql_osx'
 version '0.0.1'
-source 'UNKNOWN'
 author 'bjoernalbers'
 license 'Apache License, Version 2.0'
-summary 'UNKNOWN'
-description 'UNKNOWN'
-project_page 'UNKNOWN'
-
-## Add dependencies, if any:
-# dependency 'username/name', '>= 1.2.0'
+summary 'Manage MySQL Server on Mac OS X.'
+description '(Please visit the project page!)'
+project_page 'https://github.com/bjoernalbers/puppet-mysql_osx'
+dependency 'bjoernalbers/homebrew', '>= 0.0.2'

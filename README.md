@@ -4,13 +4,15 @@ Manage MySQL Server on Mac OS X.
 
 ## Installation
 
-The easiest way to install it and resolv the dependency is via the Puppet Module Tool:
+Just pull it from [Puppet
+Forge](http://forge.puppetlabs.com/bjoernalbers/mysql_osx):
 
 ```bash
 puppet module install bjoernalbers-mysql_osx
 ```
 
-(This module depends on bjoernalbers-homebrew.)
+(This module depends on
+[bjoernalbers-homebrew](http://forge.puppetlabs.com/bjoernalbers/homebrew).)
 
 ## Usage
 
@@ -32,4 +34,4 @@ class { 'mysql_osx':
 
 ## License
 
-Copyright (c) 2012 Björn Albers (MIT License)
+Copyright (c) 2012 Björn Albers (Apache License, Version 2.0)
