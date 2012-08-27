@@ -5,6 +5,7 @@ describe 'mysql_osx::service' do
     :ensure  => 'running',
     :enable  => 'true',
     :require => ['Class[Mysql_osx::Config]', 'File[/Library/LaunchDaemons/homebrew.mxcl.mysql.plist]']
+
   )}
 
   it { should contain_file('/Library/LaunchDaemons/homebrew.mxcl.mysql.plist').with(

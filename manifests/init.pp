@@ -35,6 +35,9 @@
 #
 # Copyright 2011 Your name here, unless otherwise noted.
 #
-class mysql_osx {
+class mysql_osx (
+  $root_password     = 'UNSET',
+  $old_root_password = '' 
+){
   include mysql_osx::install, mysql_osx::config, mysql_osx::service
 }

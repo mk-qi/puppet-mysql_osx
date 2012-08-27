@@ -23,4 +23,20 @@ class mysql_osx::install {
     logoutput => 'on_failure',
     require   => Package['mysql']
   }
+
+  # manage root password if it is set
+  if $mysql_osx::root_password != 'UNSET' {
+    case $mysql_osx::old_root_password {
+      '':      { $old_pw='' }
+      default: { $old_pw="-p'${mysql_osx::old_root_password}'" }
+    }
+
+    exec { 'set_mysql_rootpw':
+      command   => "/usr/local/bin/mysqladmin -u root ${old_pw} password '${mysql_osx::root_password}'",
+      logoutput => true,
+      unless    => "/usr/local/bin/mysqladmin -u root -p'${mysql_osx::root_password}' status > /dev/null",
+      notify    => Class['mysql_osx::service'],
+      require   => Exec['mysql_install_db']
+    }
+  }
 }

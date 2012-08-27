@@ -1,23 +1,28 @@
-# Puppet-MySQL
+# Puppet-MySQL_OSX
 
-A Puppet Module to manage MySQL on Mac OS X.
+Manage MySQL Server on Mac OS X.
 
 ## Installation
 
-This module depends on bjoernalbers-homebrew.
 The easiest way to install it and resolv the dependency is via the Puppet Module Tool:
 
 ```bash
-puppet module install bjoernalbers-mysql
+puppet module install bjoernalbers-mysql_osx
 ```
+
+(This module depends on bjoernalbers-homebrew.)
 
 ## Usage
 
 Install the MySQL Server on a node:
 
 ```puppet
-class { 'mysql': }
+class { 'mysql_osx':
+  root_password => 'secret',  # Defaults to a blank password.
+}
 ```
+
+(Note: You also have to provide the `old_root_password` on password changes!)
 
 ## Contribution
 
