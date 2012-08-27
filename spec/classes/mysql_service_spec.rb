@@ -9,6 +9,9 @@ describe 'mysql::service' do
 
   it { should contain_file('/Library/LaunchDaemons/homebrew.mxcl.mysql.plist').with(
     :ensure => 'present',
-    :source => 'puppet:///modules/mysql/homebrew.mxcl.mysql.plist'
+    :source => 'puppet:///modules/mysql/homebrew.mxcl.mysql.plist',
+    :owner  => 'root',
+    :group  => 'wheel',
+    :mode   => '0644'
   )}
 end

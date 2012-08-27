@@ -7,6 +7,9 @@ class mysql::service {
 
   file { '/Library/LaunchDaemons/homebrew.mxcl.mysql.plist':
     ensure => present,
-    source => 'puppet:///modules/mysql/homebrew.mxcl.mysql.plist'
+    source => 'puppet:///modules/mysql/homebrew.mxcl.mysql.plist',
+    owner  => 'root',
+    group  => 'wheel',
+    mode   => 0644
   }
 }
