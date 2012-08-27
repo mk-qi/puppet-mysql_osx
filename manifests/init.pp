@@ -1,6 +1,6 @@
-# == Class: mysql
+# == Class: mysql_osx
 #
-# Full description of class mysql here.
+# Full description of class mysql_osx here.
 #
 # === Parameters
 #
@@ -23,7 +23,7 @@
 #
 # === Examples
 #
-#  class { mysql:
+#  class { mysql_osx:
 #    servers => [ 'pool.ntp.org', 'ntp.local.company.com' ]
 #  }
 #
@@ -35,7 +35,9 @@
 #
 # Copyright 2011 Your name here, unless otherwise noted.
 #
-class mysql {
-
-
+class mysql_osx (
+  $root_password     = 'UNSET',
+  $old_root_password = '' 
+){
+  include mysql_osx::install, mysql_osx::config, mysql_osx::service
 }
