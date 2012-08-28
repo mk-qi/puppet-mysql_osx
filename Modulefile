@@ -1,5 +1,5 @@
 name    'bjoernalbers-mysql_osx'
-version '0.0.1'
+version '0.0.2'
 author 'bjoernalbers'
 license 'Apache License, Version 2.0'
 summary 'Manage MySQL Server on Mac OS X.'
