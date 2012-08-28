@@ -40,4 +40,5 @@ class mysql_osx (
   $old_root_password = '' 
 ){
   include mysql_osx::install, mysql_osx::config, mysql_osx::service
+  require homebrew
 }
